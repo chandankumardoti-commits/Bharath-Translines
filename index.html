@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b70">
+  <meta name="description" content="Bharath Translines offers group transportation from Hyderabad for corporate outings, weddings, family trips, educational tours and events. Enquire for a quote.">
+  <title>Bharath Translines | Group Travel & Bus Rentals</title>
+  <style>
+    :root{--navy:#123b70;--blue:#1768b2;--ink:#132238;--muted:#5c6b7d;--pale:#f2f7fc;--line:#dce5ef;--white:#fff;--green:#168653}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.02em;color:var(--navy);line-height:1.15}
+    .brand-logo{width:54px;height:54px;object-fit:contain;border-radius:8px;background:#fff}
+    .brand small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-top:4px}
+    nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:650;color:#34465d}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 19px;border-radius:10px;font-weight:750;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 7px 18px #1768b226}
+    .btn-primary:hover{background:var(--navy);transform:translateY(-1px)}
+    .btn-outline{border-color:#cbd9e9;color:var(--navy);background:#fff}
+    .btn-whatsapp{background:var(--green);color:#fff}
+    .hero{background:linear-gradient(135deg,#f2f7fc 0%,#fff 65%);padding:66px 0 54px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:850}
+    .dot{width:8px;height:8px;background:#2ca879;border-radius:50%}
+    h1{font-size:clamp(38px,5vw,62px);line-height:1.06;letter-spacing:-.045em;color:var(--navy);margin:17px 0}
+    .hero p{font-size:18px;color:var(--muted);max-width:520px;margin:0 0 26px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .trustline{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:#4e6074;font-size:13px;font-weight:650}
+    .trustline span{display:flex;align-items:center;gap:7px}
+    .hero-photo{position:relative}
+    .hero-photo img{width:100%;height:420px;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 24px 60px #17375b24;display:block}
+    .photo-tag{position:absolute;bottom:18px;left:18px;background:#fff;padding:13px 16px;border-radius:12px;box-shadow:0 8px 25px #13223822;font-weight:800;color:var(--navy)}
+    .photo-tag small{display:block;font-size:12px;color:var(--muted);font-weight:550}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 34px}
+    .section-head h2{font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;color:var(--navy);line-height:1.15;margin:10px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .fleet-grid,.service-grid,.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff}
+    .fleet-card{padding:0;overflow:hidden}
+    .fleet-visual{height:155px;background:linear-gradient(135deg,#eaf3fc,#f8fbff);display:grid;place-items:center;color:var(--navy)}
+    .fleet-photo{display:block;width:100%;height:155px;object-fit:cover}
+    .photo-card{padding:0;overflow:hidden}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+    .gallery img{width:100%;height:270px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+    .fleet-visual svg{width:112px;height:80px}
+    .fleet-body{padding:22px}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:20px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .pill{display:inline-block;margin-top:14px;background:#edf5ff;color:var(--navy);font-size:12px;font-weight:800;padding:6px 10px;border-radius:99px}
+    .services{background:var(--pale)}
+    .service-icon{width:44px;height:44px;border-radius:12px;background:#e8f2ff;color:var(--blue);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+    .benefit-grid{grid-template-columns:repeat(4,1fr)}
+    .benefit{padding:20px 14px;text-align:center}
+    .benefit .service-icon{margin:0 auto 12px}
+    .benefit h3{font-size:16px;margin:0 0 6px}
+    .benefit p{font-size:13px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+    .step{border-top:3px solid #b8d7f7;padding:18px 14px 0;counter-increment:step}
+    .step:before{content:"0" counter(step);display:block;font-size:13px;color:var(--blue);font-weight:900;margin-bottom:12px}
+    .step h3{font-size:17px;margin:0 0 7px;color:var(--navy)}
+    .step p{font-size:14px;color:var(--muted);margin:0}
+    .enquiry{background:var(--navy);color:#fff}
+    .enquiry-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}
+    .enquiry h2{font-size:clamp(30px,3.5vw,44px);line-height:1.1;letter-spacing:-.03em;margin:12px 0}
+    .enquiry-copy p{color:#d0deef}
+    .enquiry-copy .eyebrow{color:#9fc9ff}
+    .contact-note{margin-top:25px;padding:15px;border:1px solid #ffffff38;border-radius:12px;color:#e0ebf8;font-size:14px}
+    form{background:#fff;color:var(--ink);padding:26px;border-radius:18px;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field.full{grid-column:1/-1}
+    label{font-size:12px;font-weight:800;color:#34465d}
+    input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cfdae7;border-radius:9px;font:inherit;font-size:14px;color:var(--ink);background:#fff}
+    input:focus,select:focus,textarea:focus{outline:3px solid #1768b226;border-color:var(--blue)}
+    textarea{min-height:84px;resize:vertical}
+    form .btn{grid-column:1/-1;cursor:pointer;font:inherit;border:0}
+    .form-help{grid-column:1/-1;font-size:12px;color:var(--muted);margin:0}
+    .faq-list{max-width:800px;margin:auto;display:grid;gap:12px}
+    details{border:1px solid var(--line);border-radius:12px;padding:17px 20px;background:#fff}
+    summary{cursor:pointer;font-weight:800;color:var(--navy)}
+    details p{color:var(--muted);margin:12px 0 0;font-size:14px}
+    footer{padding:28px 0;background:#0b284b;color:#d7e3f1}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    footer strong{color:#fff}
+    footer p{font-size:13px;margin:5px 0}
+    .mobile-cta{display:none}
+    @media(max-width:800px){
+      nav a:not(.btn){display:none}
+      .hero{padding:42px 0}
+      .hero-grid,.enquiry-grid{grid-template-columns:1fr;gap:28px}
+      .hero-photo img{height:300px}
+      section{padding:58px 0}
+      .fleet-grid,.service-grid{grid-template-columns:1fr 1fr}
+      .gallery img{height:200px}
+      .benefit-grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .enquiry-grid{gap:20px}
+    }
+    @media(max-width:520px){
+      .nav{min-height:66px}
+      .brand{font-size:13px}
+      .brand-mark{width:38px;height:38px}
+      .nav>.btn{padding:10px 12px;font-size:12px}
+      h1{font-size:42px}
+      .hero p{font-size:16px}
+      .hero-photo img{height:250px;border-radius:14px}
+      .fleet-grid,.service-grid,.benefit-grid,.steps{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      .gallery img{height:auto;max-height:280px}
+      .card{padding:20px}
+      .fleet-card{padding:0}
+      form{padding:18px;grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      form .btn,.form-help{grid-column:auto}
+      .mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:20;display:flex;gap:10px;padding:10px;background:#fff;border-top:1px solid var(--line)}
+      .mobile-cta .btn{flex:1;padding:12px;font-size:13px}
+      body{padding-bottom:66px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Bharath Translines home">
+      <img class="brand-logo" src="assets/bharath-logo.jpeg" alt="Bharath Translines BT logo">
+      <span>BHARATH TRANSLINES<small>GROUP TRAVEL & BUS RENTALS</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#fleet">Our Fleet</a><a href="#services">Services</a><a href="#how-it-works">How It Works</a>
+      <a class="btn btn-primary" href="#enquiry">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Hyderabad group transportation</div>
+        <h1>Travel Better.<br>Travel Together.</h1>
+        <p>Comfortable group transportation for corporate outings, weddings, family trips, educational tours and events.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#enquiry">Get a Quote <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#fleet">Explore Our Fleet</a>
+        </div>
+        <div class="trustline">
+          <span>✓ Group travel solutions</span><span>✓ Enquiry-based pricing</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/bus-angle.jpeg" alt="Bharath Translines branded Tata Marcopolo bus" fetchpriority="high">
+        <div class="photo-tag">Your group. One journey.<small>Bus and tempo rental enquiries</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Choose your ride</div>
+        <h2>A vehicle for your group</h2>
+        <p>Tell us about your trip and passenger count. We’ll help you enquire about a suitable vehicle.</p>
+      </div>
+      <div class="fleet-grid">
+        <article class="card fleet-card photo-card">
+          <img class="fleet-photo" src="assets/fleet-lineup.jpeg" alt="Bharath Translines buses in the fleet" loading="lazy">
+          <div class="fleet-body">
+            <h3>Our Bus Fleet</h3>
+            <p>See our actual fleet of Bharath Translines coaches, available for group travel enquiries.</p>
+            <span class="pill">Company fleet</span>
+          </div>
+        </article>
+        <article class="card fleet-card photo-card">
+          <img class="fleet-photo" src="assets/bus-interior.jpeg" alt="Blue passenger seats inside a Bharath Translines bus" loading="lazy">
+          <div class="fleet-body">
+            <h3>Passenger Interior</h3>
+            <p>Blue passenger seating inside the coach, photographed from the aisle.</p>
+            <span class="pill">Passenger seating</span>
+          </div>
+        </article>
+        <article class="card fleet-card">
+          <div class="fleet-visual" aria-hidden="true">
+            <svg viewBox="0 0 160 100" fill="none"><rect x="10" y="20" width="140" height="57" rx="9" fill="#fff" stroke="#1768b2" stroke-width="3"/><path d="M20 29h118v25H20z" fill="#cce5ff"/><path d="M20 61h118" stroke="#1768b2" stroke-width="3"/><circle cx="37" cy="79" r="10" fill="#123b70"/><circle cx="124" cy="79" r="10" fill="#123b70"/><path d="M30 39h20m8 0h20m8 0h20m8 0h20" stroke="#1768b2" stroke-width="3"/></svg>
+          </div>
+          <div class="fleet-body">
+            <h3>40-Seater AC Coach</h3>
+            <p>Tata Marcopolo coach for larger groups, company outings, tours and functions.</p>
+            <span class="pill">Air-conditioned</span>
+          </div>
+        </article>
+        <article class="card fleet-card">
+          <div class="fleet-visual" aria-hidden="true">
+            <svg viewBox="0 0 160 100" fill="none"><path d="M18 27Q18 18 29 18h85q10 0 15 10l13 28v21H18z" fill="#fff" stroke="#1768b2" stroke-width="3"/><path d="M28 28h80v24H28z" fill="#cce5ff"/><path d="M116 31l15 21h-15z" fill="#cce5ff"/><circle cx="43" cy="78" r="10" fill="#123b70"/><circle cx="119" cy="78" r="10" fill="#123b70"/></svg>
+          </div>
+          <div class="fleet-body">
+            <h3>16-Seater Tempo Traveller</h3>
+            <p>A practical option for family gatherings, small groups, airport transfers and day trips.</p>
+            <span class="pill">Small-group travel</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="service-icon">✦</div>
+          <h3>Not sure what to choose?</h3>
+          <p>Share your passenger count, travel date and route. Ask us which available vehicle fits your plans.</p>
+          <a class="btn btn-outline" style="margin-top:18px" href="#enquiry">Help me choose →</a>
+        </article>
+      </div>
+      <div class="gallery" aria-label="More Bharath Translines bus photos">
+        <img src="assets/bus-front.jpeg" alt="Front view of a Bharath Translines bus" loading="lazy">
+        <img src="assets/bus-side.jpeg" alt="Side view of a Bharath Translines bus" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Where can we take you?</div>
+        <h2>Travel for every occasion</h2>
+        <p>One simple enquiry for your group’s transportation needs.</p>
+      </div>
+      <div class="service-grid">
+        <article class="card"><div class="service-icon">🏢</div><h3>Corporate Travel</h3><p>Employee transportation, office trips and corporate outings.</p></article>
+        <article class="card"><div class="service-icon">💍</div><h3>Weddings & Functions</h3><p>Group transport for weddings, family functions and celebrations.</p></article>
+        <article class="card"><div class="service-icon">🎓</div><h3>Educational Tours</h3><p>Transport enquiries for school, college and student group trips.</p></article>
+        <article class="card"><div class="service-icon">🧳</div><h3>Outstation Trips</h3><p>Plan transport for group getaways and trips beyond Hyderabad.</p></article>
+        <article class="card"><div class="service-icon">🎪</div><h3>Events & Gatherings</h3><p>Arrange group transportation for events and special occasions.</p></article>
+        <article class="card"><div class="service-icon">🤝</div><h3>Group Connections</h3><p>Tell us what you’re planning and we’ll discuss your transport requirements.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Comfort on the way</div>
+        <h2>Travel essentials, made simple</h2>
+        <p>Features available on the 40-seater fleet, subject to the vehicle booked.</p>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit"><div class="service-icon">💺</div><h3>Pushback Seats</h3><p>For a more comfortable journey.</p></div>
+        <div class="benefit"><div class="service-icon">📍</div><h3>GPS</h3><p>GPS-equipped buses.</p></div>
+        <div class="benefit"><div class="service-icon">🔌</div><h3>Charging Ports</h3><p>Convenience for compatible devices.</p></div>
+        <div class="benefit"><div class="service-icon">🧳</div><h3>Luggage Space</h3><p>Space for group travel essentials.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Four simple steps</div>
+        <h2>How booking works</h2>
+        <p>No complicated booking process. Start with an enquiry.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Share your trip</h3><p>Tell us the date, route and number of passengers.</p></div>
+        <div class="step"><h3>Choose a vehicle</h3><p>Discuss the suitable vehicle for your group.</p></div>
+        <div class="step"><h3>Receive a quote</h3><p>Get pricing based on your trip details and requirements.</p></div>
+        <div class="step"><h3>Confirm your trip</h3><p>Finalise details with our team before your journey.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquiry" id="enquiry">
+    <div class="wrap enquiry-grid">
+      <div class="enquiry-copy">
+        <div class="eyebrow">Let’s plan your journey</div>
+        <h2>Tell us where your group is going.</h2>
+        <p>Fill in a few details and send your enquiry directly to Bharath Translines on WhatsApp.</p>
+        <div class="contact-note"><strong>Helpful to include:</strong><br>Travel date · Pickup point · Destination · Passenger count</div>
+      </div>
+      <form id="enquiryForm">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="phone">Your phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Enter phone number"></div>
+        <div class="field"><label for="trip">Type of trip *</label><select id="trip" name="trip" required><option value="">Choose trip type</option><option>Corporate / Employee Travel</option><option>Corporate Outing</option><option>Wedding / Family Function</option><option>Educational Tour</option><option>Event</option><option>Outstation Trip</option><option>Other</option></select></div>
+        <div class="field"><label for="date">Travel date *</label><input id="date" name="date" type="date" required></div>
+        <div class="field"><label for="pickup">Pickup location *</label><input id="pickup" name="pickup" required placeholder="e.g. Kukatpally, Hyderabad"></div>
+        <div class="field"><label for="destination">Destination *</label><input id="destination" name="destination" required placeholder="Where are you going?"></div>
+        <div class="field"><label for="passengers">Number of passengers *</label><input id="passengers" name="passengers" type="number" min="1" required placeholder="e.g. 35"></div>
+        <div class="field"><label for="vehicle">Vehicle preference</label><select id="vehicle" name="vehicle"><option>Help me choose</option><option>40-Seater AC Coach</option><option>16-Seater Tempo Traveller</option></select></div>
+        <div class="field full"><label for="notes">Additional details (optional)</label><textarea id="notes" name="notes" placeholder="Return trip, duration, special requirements..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Enquiry on WhatsApp →</button>
+        <p class="form-help">Your message will open in WhatsApp for you to review and send. A booking is not confirmed until agreed with the team.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Good to know</div><h2>Frequently asked questions</h2></div>
+      <div class="faq-list">
+        <details><summary>How do I get a rental quote?</summary><p>Send your travel date, pickup location, destination, passenger count and trip duration through the enquiry form. Pricing depends on your requirements and availability.</p></details>
+        <details><summary>Are tolls, parking and interstate charges included?</summary><p>These charges may be extra. Confirm the final inclusions and any applicable driver, night-halt or additional-distance charges when you receive your quote.</p></details>
+        <details><summary>Can I enquire for a corporate outing or wedding?</summary><p>Yes. Select your trip type in the form and include any useful details about the group and schedule.</p></details>
+        <details><summary>Does submitting the form confirm my booking?</summary><p>No. The form prepares a WhatsApp enquiry. Your booking is confirmed only after you discuss and agree on the trip details with Bharath Translines.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><strong>BHARATH TRANSLINES</strong><p>Group travel and bus rental enquiries · Hyderabad</p></div>
+    <p>© <span id="year"></span> Bharath Translines. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-outline" href="#enquiry">Get a Quote</a>
+  <a class="btn btn-whatsapp" id="mobileWhatsApp" href="#enquiry">WhatsApp Us</a>
+</div>
+
+<script>
+  // IMPORTANT: Replace this placeholder with the business WhatsApp number in international format.
+  // Example format for India: 91 followed by the 10-digit mobile number; digits only, no + or spaces.
+  const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function openWhatsApp(message) {
+    if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
+      alert("The WhatsApp number has not been configured yet. Please update WHATSAPP_NUMBER in index.html with the business number.");
+      return;
+    }
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const message = [
+      "Hello Bharath Translines, I would like a transport quote.",
+      "",
+      "Name: " + data.get("name"),
+      "Phone: " + data.get("phone"),
+      "Trip type: " + data.get("trip"),
+      "Travel date: " + data.get("date"),
+      "Pickup: " + data.get("pickup"),
+      "Destination: " + data.get("destination"),
+      "Passengers: " + data.get("passengers"),
+      "Vehicle preference: " + data.get("vehicle"),
+      "Additional details: " + (data.get("notes") || "None")
+    ].join("\n");
+    openWhatsApp(message);
+  });
+
+  document.getElementById("mobileWhatsApp").addEventListener("click", function(event) {
+    event.preventDefault();
+    openWhatsApp("Hello Bharath Translines, I would like to enquire about a bus or tempo rental.");
+  });
+</script>
+</body>
+</html>
